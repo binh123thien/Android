@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android dev/Github/Android/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1755" />
+        <entry key="..\:/Android dev/Github/Android/app/src/main/res/drawable/ic_baseline_login_24.xml" value="0.1755" />
+        <entry key="..\:/Android dev/Github/Android/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1755" />
+        <entry key="..\:/Android dev/Github/Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1755" />
+        <entry key="..\:/Android dev/Github/Android/app/src/main/res/layout/activity_main.xml" value="0.1381340579710145" />
+        <entry key="..\:/Android dev/Github/Android/app/src/main/res/layout/bedroom.xml" value="0.1381340579710145" />
+        <entry key="..\:/Android dev/Github/Android/app/src/main/res/layout/dashboard.xml" value="0.1796875" />
+        <entry key="..\:/Android dev/Github/Android/app/src/main/res/layout/kitchenroom.xml" value="0.1381340579710145" />
+        <entry key="..\:/Android dev/Github/Android/app/src/main/res/layout/livingroom.xml" value="0.1381340579710145" />
+        <entry key="..\:/Android dev/Github/Android/app/src/main/res/menu/menu_bottom_nav.xml" value="0.1796875" />
         <entry key="..\:/AndroidStudioProjects/Android/app/src/main/res/layout/dashboard.xml" value="0.14130434782608695" />
         <entry key="..\:/AndroidStudioProjects/Android/app/src/main/res/layout/livingroom.xml" value="0.14130434782608695" />
         <entry key="..\:/Project android/project_cuoi_ki/app/src/main/res/layout/activity_main.xml" value="0.22" />
