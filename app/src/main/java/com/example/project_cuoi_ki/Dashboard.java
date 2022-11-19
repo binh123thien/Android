@@ -26,46 +26,46 @@ public class Dashboard extends AppCompatActivity {
         textkitchen = findViewById(R.id.textkitchenroom);
 
 
-//        // nút nhấn để chuyển tới giao diện living room
-//        imageliving.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent intent=new Intent(menu.this,livingroom.class);
-//                startActivity(intent);
-//            }
-//        });
-//        textliving.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent intent=new Intent(menu.this,livingroom.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        //nut nhấn để chuyển tới bedroom
-//        imagebed.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent intent=new Intent(menu.this,bedroom.class);
-//                startActivity(intent);
-//            }
-//        });
-//        textbed.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent intent=new Intent(menu.this,bedroom.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        //nút nhấn để chuyển tới kitchen room
-//        imagekitchen.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent intent=new Intent(menu.this,kitchenroom.class);
-//                startActivity(intent);
-//            }
-//        });
-//        textkitchen.setOnClickListener(new View.OnClickListener() {
-//            public void onClick(View v) {
-//                Intent intent=new Intent(menu.this,kitchenroom.class);
-//                startActivity(intent);
-//            }
-//        });
+        // nút nhấn để chuyển tới giao diện living room
+        imageliving.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(Dashboard.this,Living_Room.class);
+                startActivity(intent);
+            }
+        });
+        textliving.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(Dashboard.this,Living_Room.class);
+                startActivity(intent);
+            }
+        });
+
+        //nut nhấn để chuyển tới bedroom
+        imagebed.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(Dashboard.this,Bed_Room.class);
+                startActivity(intent);
+            }
+        });
+        textbed.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(Dashboard.this,Bed_Room.class);
+                startActivity(intent);
+            }
+        });
+
+        //nút nhấn để chuyển tới kitchen room
+        imagekitchen.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(Dashboard.this,Kitchen_Room.class);
+                startActivity(intent);
+            }
+        });
+        textkitchen.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent=new Intent(Dashboard.this,Kitchen_Room.class);
+                startActivity(intent);
+            }
+        });
     }
 }

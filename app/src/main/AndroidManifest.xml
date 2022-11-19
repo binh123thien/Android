@@ -20,6 +20,9 @@
         </activity>
         <activity android:name=".Register"/>
         <activity android:name=".Dashboard"/>
+        <activity android:name=".Living_Room"/>
+        <activity android:name=".Bed_Room"/>
+        <activity android:name=".Kitchen_Room"/>
         <activity
             android:name=".MainActivity"
             />
