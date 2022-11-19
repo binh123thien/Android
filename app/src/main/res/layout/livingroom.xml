@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/livingbg"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    >
+
+    <TextView
+        android:id="@+id/livingroomheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Living Room"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/tiviliving"
+        android:layout_width="190dp"
+        android:layout_height="240dp"
+        android:layout_below="@id/livingroomheader"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/duongvien_goctron"
+        android:backgroundTint="#85C1E9">
+
+        <ImageView
+            android:id="@+id/tiviicon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/smarttv" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tiviicon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="TV            "
+            android:textSize="25dp"
+            android:textStyle="bold"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lampliving"
+        android:layout_width="190dp"
+        android:layout_height="240dp"
+        android:layout_below="@id/livingroomheader"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/duongvien_goctron"
+        android:backgroundTint="#85C1E9">
+
+        <ImageView
+            android:id="@+id/lamplivingicon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ceilinglamp" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lamplivingicon"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Lamp        "
+            android:textSize="25dp"
+            android:textStyle="bold"
+
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/cameraliving"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@id/tiviliving"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/duongvien_goctron"
+        android:backgroundTint="#85C1E9">
+
+        <ImageView
+            android:id="@+id/cameraicon"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/camera" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cameraicon"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="5dp"
+            android:text="Camera      "
+            android:textSize="25dp"
+            android:textStyle="bold"
+
+            />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

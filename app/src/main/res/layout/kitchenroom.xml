@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/kitchenbg"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    >
+
+    <TextView
+        android:layout_marginRight="50dp"
+        android:id="@+id/kitchenroomheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Kitchen Room"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/fridge"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_below="@id/kitchenroomheader"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/duongvien_goctron"
+        android:backgroundTint="#85C1E9">
+
+
+        <Switch
+            android:id="@+id/switchfridge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="20dp"
+            android:text="Fridge      "
+            android:textSize="25dp"
+            android:textStyle="bold"
+
+            />
+
+        <ImageView
+            android:id="@+id/imagefridge"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/switchfridge"
+            android:layout_marginLeft="110dp"
+
+            android:layout_marginTop="20dp"
+            android:src="@drawable/fridge" />
+
+        <SeekBar
+
+            android:id="@+id/seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imagefridge"
+            android:layout_marginTop="40dp"
+            android:max="20"
+            android:min="0"
+            android:progress="10" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="155dp"
+        android:layout_height="180dp"
+        android:layout_below="@id/fridge"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/duongvien_goctron"
+        android:backgroundTint="#85C1E9">
+
+        <ImageView
+            android:id="@+id/lighticon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/countertop"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/lighticon"
+            android:layout_marginTop="20dp"
+            android:text="Light"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/lighticon"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#2874A6 "
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="155dp"
+        android:layout_height="180dp"
+        android:layout_below="@id/fridge"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/duongvien_goctron"
+        android:backgroundTint="#85C1E9">
+
+        <ImageView
+            android:id="@+id/exhausticon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/exhaust"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/exhausticon"
+            android:layout_marginTop="20dp"
+            android:text="Exhaust"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ToggleButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/exhausticon"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#2874A6 "
+
+            />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

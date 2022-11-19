@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bedroombg"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    >
+
+    <TextView
+        android:id="@+id/bedroomheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:text="Bed Room"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/aircondition"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_below="@id/bedroomheader"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/duongvien_goctron"
+        android:backgroundTint="#85C1E9"
+        >
+
+
+
+        <Switch
+            android:id="@+id/switchairconditon"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:text="Air conditon      "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/imageaircondition"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="20dp"
+
+            android:layout_below="@id/switchairconditon"
+            android:src="@drawable/ac" />
+
+        <SeekBar
+
+            android:id="@+id/seekBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageaircondition"
+            android:layout_marginTop="40dp"
+            android:max="30"
+            android:min="16"
+            android:progress="25" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="155dp"
+        android:layout_height="180dp"
+        android:layout_below="@id/aircondition"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/duongvien_goctron"
+        android:backgroundTint="#85C1E9">
+        <ImageView
+            android:id="@+id/lampicon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/idea"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+
+            />
+
+        <ToggleButton
+            android:layout_below="@id/lampicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2874A6 "
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+
+        android:layout_width="155dp"
+        android:layout_height="180dp"
+        android:layout_below="@id/aircondition"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/duongvien_goctron"
+        android:backgroundTint="#85C1E9">
+
+        <ImageView
+            android:id="@+id/tvicon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/monitor"
+
+            />
+
+        <ToggleButton
+            android:layout_below="@id/tvicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2874A6 "
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+
+            />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
