@@ -16,10 +16,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintHorizontal_bias="0.259"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.767" />
+        app:layout_constraintVertical_bias="0.769" />
 
     <EditText
         android:id="@+id/edit_Txt_Password"
@@ -83,8 +83,8 @@
 
     <TextView
         android:id="@+id/btn_register_toogle"
-        android:layout_width="104dp"
-        android:layout_height="47dp"
+        android:layout_width="105dp"
+        android:layout_height="45dp"
         android:backgroundTint="@color/white"
         android:gravity="center"
         android:text="Register"
@@ -93,10 +93,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
+        app:layout_constraintHorizontal_bias="0.905"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.769" />
+        app:layout_constraintVertical_bias="0.768" />
 
     <TextView
         android:id="@+id/textView3"
