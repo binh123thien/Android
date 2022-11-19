@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextClock;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Dashboard extends AppCompatActivity {
     ImageView imageliving,imagebed,imagekitchen;
     TextView textliving,textbed,textkitchen;
-
+    TextClock time;
+    private static final String TIME_FORMAT_24 = "HH:mm:ss";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +26,11 @@ public class Dashboard extends AppCompatActivity {
         textliving = findViewById(R.id.textlivingroom);
         textbed = findViewById(R.id.textbedroom);
         textkitchen = findViewById(R.id.textkitchenroom);
+        time=findViewById(R.id.texttime);
 
+        // hiển thị thòi gian
+        String formatdate = "E,   d-M-yyyy    hh:mm:ss";
+        time.setFormat24Hour(formatdate);
 
         // nút nhấn để chuyển tới giao diện living room
         imageliving.setOnClickListener(new View.OnClickListener() {

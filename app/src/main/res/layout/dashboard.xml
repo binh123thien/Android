@@ -32,35 +32,36 @@
 
     <RelativeLayout
         android:id="@+id/bg1"
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_width="wrap_content"
+        android:layout_height="186dp"
         android:layout_below="@+id/welcometext"
-        android:layout_marginTop="30dp"
-        android:backgroundTint="#FF8C00"
+        android:layout_marginTop="15dp"
         android:background="@drawable/duongvien_goctron"
-        android:radius="10dp"
-        >
+        android:backgroundTint="#FF8C00"
+        android:radius="10dp">
 
-        <TextView
+        <TextClock
             android:id="@+id/texttime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:format12Hour="k:m:sa"
+            android:format24Hour="E,   d-M-yyyy     hh:mm:ss"
             android:gravity="center"
             android:paddingTop="5dp"
-            android:text="21:30"
             android:textColor="@color/white"
             android:textSize="25dp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textcity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="349dp"
+            android:layout_height="22dp"
             android:layout_below="@id/texttime"
+            android:layout_marginTop="9dp"
             android:gravity="center"
             android:text="HO CHI MINH"
             android:textColor="@color/white"
-            android:textSize="25dp"
+            android:textSize="18dp"
             android:textStyle="bold" />
 
         <ImageView
@@ -95,6 +96,7 @@
             android:src="@drawable/img"
 
             />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -112,12 +114,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/bg1"
+        android:layout_marginTop="21dp"
         android:text="Rooms"
         android:textColor="@color/black"
         android:textSize="25dp"
-        android:textStyle="bold"
 
-        />
+        android:textStyle="bold" />
 
     <RelativeLayout
         android:id="@+id/livingroom"
