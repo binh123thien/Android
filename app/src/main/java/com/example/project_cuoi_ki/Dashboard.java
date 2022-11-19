@@ -29,7 +29,7 @@ public class Dashboard extends AppCompatActivity {
         time=findViewById(R.id.texttime);
 
         // hiển thị thòi gian
-        String formatdate = "E, d-M-yyyy hh:mm:ss";
+        String formatdate = "E,   d-M-yyyy    hh:mm:ss";
         time.setFormat24Hour(formatdate);
 
         // nút nhấn để chuyển tới giao diện living room
