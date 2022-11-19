@@ -45,7 +45,7 @@
             android:layout_width="294dp"
             android:layout_height="wrap_content"
             android:format12Hour="k:m:sa"
-            android:format24Hour="E, d-M-yyyy k:m:sa"
+            android:format24Hour="E, d-M-yyyy hh:mm:ss"
             android:gravity="center"
             android:paddingTop="5dp"
             android:textColor="@color/white"
