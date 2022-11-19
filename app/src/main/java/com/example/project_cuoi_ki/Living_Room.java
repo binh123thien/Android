@@ -1,4 +1,7 @@
 package com.example.project_cuoi_ki;
 
-public class Living_Room {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class Living_Room extends AppCompatActivity {
+
 }
