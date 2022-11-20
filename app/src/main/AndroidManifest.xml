@@ -23,9 +23,7 @@
         <activity android:name=".Living_Room"/>
         <activity android:name=".Bed_Room"/>
         <activity android:name=".Kitchen_Room"/>
-        <activity
-            android:name=".MainActivity"
-            />
+        <activity android:name=".Profile"/>
     </application>
 
 </manifest>

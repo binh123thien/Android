@@ -44,8 +44,12 @@ public class Dashboard extends AppCompatActivity {
                 switch (item.getItemId())
                 {
                     case R.id.homeaction:
+                        //chuyển trang dashboard
+                        dashboard_page();
                         break;
                     case R.id.personaction:
+                        // chuyển trang profile
+                        profile_page();
                         break;
                     case R.id.logoutaction:
                         showAlertDialog(R.layout.dialog);
@@ -53,6 +57,15 @@ public class Dashboard extends AppCompatActivity {
 
                 }
                 return false;
+            }
+            public void dashboard_page(){
+                Intent intent=new Intent(Dashboard.this,Dashboard.class);
+                startActivity(intent);
+            }
+
+            public void profile_page(){
+                Intent intent=new Intent(Dashboard.this,Profile.class);
+                startActivity(intent);
             }
 
             private void showAlertDialog(int dialog) {
