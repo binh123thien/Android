@@ -44,8 +44,8 @@ public class Dashboard extends AppCompatActivity {
         time.setFormat24Hour(formatdate);
 
         //đọc nhiệt độ, độ ẩm
-        final DatabaseReference nhietdo=database.getReference("NhietDo");
-        final DatabaseReference doam=database.getReference("DoAm");
+        final DatabaseReference nhietdo=database.getReference("Room_NhietDo");
+        final DatabaseReference doam=database.getReference("Room_DoAm");
 
         nhietdo.addValueEventListener(new ValueEventListener() {
             @Override

@@ -48,7 +48,7 @@
             android:layout_below="@id/switchfridge"
             android:layout_marginLeft="110dp"
 
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="-5dp"
             android:src="@drawable/fridge" />
 
         <TextView
@@ -76,10 +76,10 @@
 
     <RelativeLayout
 
-        android:layout_width="168dp"
-        android:layout_height="174dp"
+        android:layout_width="151dp"
+        android:layout_height="176dp"
         android:layout_below="@id/fridge"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/duongvien_goctron"
         android:backgroundTint="#85C1E9">
 
@@ -103,12 +103,13 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <ToggleButton
-            android:layout_width="75dp"
-            android:layout_height="wrap_content"
+        <Switch
+            android:id="@+id/swLight"
+            android:layout_width="69dp"
+            android:layout_height="46dp"
             android:layout_below="@id/lighticon"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="22dp"
+            android:layout_marginTop="11dp"
             android:backgroundTint="#2874A6 "
 
             />
@@ -145,12 +146,13 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
-        <ToggleButton
-            android:layout_width="65dp"
-            android:layout_height="wrap_content"
+        <Switch
+            android:id="@+id/swExhaust"
+            android:layout_width="51dp"
+            android:layout_height="45dp"
             android:layout_below="@id/exhausticon"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="11dp"
             android:backgroundTint="#2874A6 "
 
             />

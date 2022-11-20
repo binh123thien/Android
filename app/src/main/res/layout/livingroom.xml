@@ -34,7 +34,7 @@
 
             android:layout_marginLeft="45dp"
             android:layout_marginTop="30dp"
-            android:src="@drawable/smarttv" />
+             />
 
         <Switch
             android:id="@+id/swTivi"
@@ -69,7 +69,7 @@
 
             android:layout_marginLeft="45dp"
             android:layout_marginTop="30dp"
-            android:src="@drawable/ceilinglamp" />
+             />
 
         <Switch
             android:id="@+id/swLamp"
