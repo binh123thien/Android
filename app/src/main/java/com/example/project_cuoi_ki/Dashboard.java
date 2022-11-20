@@ -2,14 +2,18 @@ package com.example.project_cuoi_ki;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextClock;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,6 +24,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Dashboard extends AppCompatActivity {
+    AlertDialog.Builder builderDiaglog;
+    AlertDialog alertDialog;
+
     ImageView imageliving,imagebed,imagekitchen;
     TextView textliving,textbed,textkitchen,textnhietdo,textdoam;
     TextClock time;
@@ -29,6 +36,42 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
+
+        BottomNavigationView navigationView = findViewById(R.id.bottom_nav);
+        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId())
+                {
+                    case R.id.homeaction:
+                        break;
+                    case R.id.personaction:
+                        break;
+                    case R.id.logoutaction:
+                        showAlertDialog(R.layout.dialog);
+                        break;
+
+                }
+                return false;
+            }
+
+            private void showAlertDialog(int dialog) {
+                builderDiaglog = new AlertDialog.Builder(Dashboard.this);
+                View layoutView = getLayoutInflater().inflate(dialog,null);
+                Button btnlogout = layoutView.findViewById(R.id.btnlogout);
+
+                builderDiaglog.setView(layoutView);
+                alertDialog = builderDiaglog.create();
+                alertDialog.show();
+
+                btnlogout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        alertDialog.dismiss();
+                    }
+                });
+            }
+        });
         imageliving = findViewById(R.id.imagelivingroom);
         imagebed = findViewById(R.id.imagebedroom);
         imagekitchen = findViewById(R.id.imagekitchenroom);
