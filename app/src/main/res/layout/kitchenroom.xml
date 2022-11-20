@@ -50,10 +50,17 @@
 
             android:layout_marginTop="20dp"
             android:src="@drawable/fridge" />
-
+        <TextView
+            android:id="@+id/tv_seekbarfridge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagefridge"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="30dp" />
         <SeekBar
 
-            android:id="@+id/seekBar"
+            android:id="@+id/seekBarfridge"
             style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
