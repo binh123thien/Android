@@ -27,8 +27,8 @@ public class Dashboard extends AppCompatActivity {
     AlertDialog.Builder builderDiaglog;
     AlertDialog alertDialog;
 
-    ImageView imageliving,imagebed,imagekitchen;
-    TextView textliving,textbed,textkitchen,textnhietdo,textdoam;
+    ImageView imageliving,imagebed,imagekitchen, imageProfile;
+    TextView textliving,textbed,textkitchen,textnhietdo,textdoam,  nameProfile, emailProfile;
     TextClock time;
     private static final String TIME_FORMAT_24 = "HH:mm:ss";
 
@@ -85,6 +85,9 @@ public class Dashboard extends AppCompatActivity {
                 });
             }
         });
+        emailProfile = findViewById(R.id.email_profile);
+        nameProfile = findViewById(R.id.name_profile);
+        imageProfile = findViewById(R.id.img_ava);
         imageliving = findViewById(R.id.imagelivingroom);
         imagebed = findViewById(R.id.imagebedroom);
         imagekitchen = findViewById(R.id.imagekitchenroom);
