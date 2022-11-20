@@ -50,6 +50,7 @@
 
             android:layout_marginTop="20dp"
             android:src="@drawable/fridge" />
+
         <TextView
             android:id="@+id/tv_seekbarfridge"
             android:layout_width="match_parent"
@@ -58,6 +59,7 @@
             android:gravity="center"
             android:text="0"
             android:textSize="30dp" />
+
         <SeekBar
 
             android:id="@+id/seekBarfridge"
@@ -74,10 +76,10 @@
 
     <RelativeLayout
 
-        android:layout_width="155dp"
-        android:layout_height="180dp"
+        android:layout_width="168dp"
+        android:layout_height="174dp"
         android:layout_below="@id/fridge"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="26dp"
         android:background="@drawable/duongvien_goctron"
         android:backgroundTint="#85C1E9">
 
@@ -102,11 +104,11 @@
             android:textStyle="bold" />
 
         <ToggleButton
-            android:layout_width="60dp"
-            android:layout_height="50dp"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/lighticon"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="22dp"
             android:backgroundTint="#2874A6 "
 
             />
@@ -115,11 +117,11 @@
 
     <RelativeLayout
 
-        android:layout_width="155dp"
-        android:layout_height="180dp"
+        android:layout_width="wrap_content"
+        android:layout_height="176dp"
         android:layout_below="@id/fridge"
         android:layout_marginLeft="180dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/duongvien_goctron"
         android:backgroundTint="#85C1E9">
 
@@ -135,7 +137,7 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="59dp"
             android:layout_below="@id/exhausticon"
             android:layout_marginTop="20dp"
             android:text="Exhaust"
@@ -144,11 +146,11 @@
             android:textStyle="bold" />
 
         <ToggleButton
-            android:layout_width="60dp"
-            android:layout_height="50dp"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
             android:layout_below="@id/exhausticon"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="28dp"
             android:backgroundTint="#2874A6 "
 
             />
