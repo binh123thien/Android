@@ -21,7 +21,7 @@ public class Living_Room extends AppCompatActivity {
     boolean stateTV=false;
     boolean stateLamp=false;
     boolean stateCamera=false;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
