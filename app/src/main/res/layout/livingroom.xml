@@ -37,6 +37,7 @@
             android:src="@drawable/smarttv" />
 
         <Switch
+            android:id="@+id/swTivi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tiviicon"
@@ -71,6 +72,7 @@
             android:src="@drawable/ceilinglamp" />
 
         <Switch
+            android:id="@+id/swLamp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/lamplivingicon"
@@ -104,6 +106,7 @@
             android:src="@drawable/camera" />
 
         <Switch
+            android:id="@+id/swCamera"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/cameraicon"

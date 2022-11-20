@@ -73,11 +73,11 @@
             android:src="@drawable/cloud" />
 
         <TextView
+            android:id="@+id/nhiet_do"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cloud"
             android:layout_marginLeft="52dp"
-            android:text="25°C"
             android:textColor="@color/white"
             android:textSize="30dp" />
 
@@ -98,11 +98,11 @@
             />
 
         <TextView
+            android:id="@+id/do_am"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/cloud"
             android:layout_marginLeft="234dp"
-            android:text="70%"
             android:textColor="@color/white"
             android:textSize="30dp" />
 
