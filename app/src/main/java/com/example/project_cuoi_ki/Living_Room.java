@@ -12,7 +12,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Living_Room extends AppCompatActivity {
     ImageView TVicon,Lampicon,Camaraicon;
     Switch swTV, swLamp, swCamera;
-    boolean stateTV,stateLamp,stateCamara
+    boolean stateTV,stateLamp,stateCamara;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
