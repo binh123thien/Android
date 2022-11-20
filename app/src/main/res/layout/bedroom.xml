@@ -25,20 +25,18 @@
         android:layout_below="@id/bedroomheader"
         android:layout_marginTop="30dp"
         android:background="@drawable/duongvien_goctron"
-        android:backgroundTint="#85C1E9"
-        >
-
+        android:backgroundTint="#85C1E9">
 
 
         <Switch
             android:id="@+id/switchairconditon"
-            android:textStyle="bold"
-            android:textSize="25dp"
-            android:text="Air conditon      "
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="20dp"
+            android:text="Air conditon      "
+            android:textSize="25dp"
+            android:textStyle="bold"
 
             />
 
@@ -46,11 +44,21 @@
             android:id="@+id/imageaircondition"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="20dp"
-
             android:layout_below="@id/switchairconditon"
+            android:layout_marginLeft="110dp"
+
+            android:layout_marginTop="20dp"
             android:src="@drawable/ac" />
+
+        <TextView
+            android:id="@+id/tv_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageaircondition"
+            android:gravity="center"
+            android:text="0"
+            android:textSize="30dp" />
+
 
         <SeekBar
 
