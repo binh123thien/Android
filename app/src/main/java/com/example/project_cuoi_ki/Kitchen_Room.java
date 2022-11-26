@@ -176,7 +176,6 @@ public class Kitchen_Room extends AppCompatActivity {
         });
     }
     private void init(){
-        tv_seekbarfridge = findViewById(R.id.tv_seekbarfridge);
-        seekbarfridge = findViewById(R.id.seekBarfridge);
+
     }
 }

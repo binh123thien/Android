@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="30dp"
+    android:backgroundTint="#ECF0F1"
     android:paddingRight="30dp">
 
     <TextView
+        android:fontFamily="@font/kanit_regular"
         android:id="@+id/welcometext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +18,7 @@
         android:layout_marginTop="10dp"
         android:text="Welcome to your home!"
         android:textColor="@color/black"
-        android:textSize="30dp" />
+        android:textSize="25dp" />
 
     <RelativeLayout
         android:id="@+id/bg1"
@@ -41,6 +43,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:fontFamily="@font/kanit_regular"
             android:id="@+id/textcity"
             android:layout_width="349dp"
             android:layout_height="22dp"
@@ -61,6 +64,7 @@
             android:src="@drawable/cloud" />
 
         <TextView
+            android:fontFamily="@font/kanit_regular"
             android:id="@+id/nhiet_do"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -86,6 +90,7 @@
             />
 
         <TextView
+            android:fontFamily="@font/kanit_regular"
             android:id="@+id/do_am"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,24 +103,25 @@
     </RelativeLayout>
 
     <TextView
+        android:layout_below="@id/bg1"
         android:id="@+id/rooms"
+        android:fontFamily="@font/kanit_regular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/bg1"
         android:layout_marginTop="15dp"
         android:text="Rooms"
         android:textColor="@color/black"
-        android:textSize="25dp"
+        android:textSize="20dp"
 
         android:textStyle="bold" />
 
     <RelativeLayout
         android:id="@+id/livingroom"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="100dp"
         android:layout_below="@id/rooms"
         android:background="@drawable/duongvien_goctron"
-        android:backgroundTint="#B0C4DE">
+        android:backgroundTint="#E5E7E9">
 
         <ImageView
             android:id="@+id/imagelivingroom"
@@ -126,6 +132,7 @@
             android:src="@drawable/livingroom" />
 
         <TextView
+            android:fontFamily="@font/kanit_regular"
             android:id="@+id/textlivingroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -133,18 +140,19 @@
             android:layout_marginTop="15dp"
             android:text="Living Room"
             android:textColor="@color/black"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
+            android:fontFamily="@font/kanit_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/textlivingroom"
             android:layout_marginLeft="160dp"
             android:layout_marginTop="10dp"
-            android:text="🔴    2 Devices"
+            android:text="🔴    4 Devices"
             android:textColor="#FF0000"
-            android:textSize="18dp"
+            android:textSize="15dp"
             android:textStyle="bold"
 
             />
@@ -153,11 +161,11 @@
     <RelativeLayout
         android:id="@+id/bedroom"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="100dp"
         android:layout_below="@id/livingroom"
         android:layout_marginTop="20dp"
         android:background="@drawable/duongvien_goctron"
-        android:backgroundTint="#B0C4DE"
+        android:backgroundTint="#E5E7E9"
         >
 
         <ImageView
@@ -169,6 +177,7 @@
             android:src="@drawable/bedroom" />
 
         <TextView
+            android:fontFamily="@font/kanit_regular"
             android:id="@+id/textbedroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -176,10 +185,11 @@
             android:layout_marginTop="15dp"
             android:text="Bed Room"
             android:textColor="@color/black"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
+            android:fontFamily="@font/kanit_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/textbedroom"
@@ -187,7 +197,7 @@
             android:layout_marginTop="10dp"
             android:text="🔴    3 Devices"
             android:textColor="#FF0000"
-            android:textSize="18dp"
+            android:textSize="15dp"
             android:textStyle="bold"
 
             />
@@ -198,11 +208,11 @@
     <RelativeLayout
         android:id="@+id/kitchenroom"
         android:layout_width="match_parent"
-        android:layout_height="110dp"
+        android:layout_height="100dp"
         android:layout_below="@id/bedroom"
         android:layout_marginTop="20dp"
         android:background="@drawable/duongvien_goctron"
-        android:backgroundTint="#B0C4DE">
+        android:backgroundTint="#E5E7E9 ">
 
         <ImageView
             android:id="@+id/imagekitchenroom"
@@ -213,6 +223,7 @@
             android:src="@drawable/flavor" />
 
         <TextView
+            android:fontFamily="@font/kanit_regular"
             android:id="@+id/textkitchenroom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -220,10 +231,11 @@
             android:layout_marginTop="15dp"
             android:text="Kitchen Room"
             android:textColor="@color/black"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
         <TextView
+            android:fontFamily="@font/kanit_regular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/textkitchenroom"
@@ -231,7 +243,7 @@
             android:layout_marginTop="10dp"
             android:text="🔴    4 Devices"
             android:textColor="#FF0000"
-            android:textSize="18dp"
+            android:textSize="15dp"
             android:textStyle="bold"
 
             />
@@ -245,6 +257,8 @@
         android:id="@+id/bottom_nav"
         android:layout_alignParentBottom="true"
         app:itemIconTint="#FF8C00"
+
         app:itemTextColor="@color/black"
+        android:background="@drawable/duongvien_goctron"
         app:menu="@menu/menu_bottom_nav" />
 </RelativeLayout>

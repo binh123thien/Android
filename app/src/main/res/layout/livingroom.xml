@@ -2,50 +2,55 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/livingbg"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F7F9F9 "
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
 
     <TextView
+        android:fontFamily="@font/kanit_regular"
         android:id="@+id/livingroomheader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:gravity="center"
+        android:layout_marginTop="100dp"
+
         android:text="Living Room"
         android:textColor="@color/black"
-        android:textSize="35dp"
+        android:textSize="25dp"
         android:textStyle="bold" />
 
     <RelativeLayout
         android:id="@+id/tiviliving"
-        android:layout_width="190dp"
-        android:layout_height="240dp"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+
         android:layout_below="@id/livingroomheader"
         android:layout_marginTop="30dp"
         android:background="@drawable/duongvien_goctron"
-        android:backgroundTint="#85C1E9">
+        android:backgroundTint="#E5E7E9">
 
         <ImageView
             android:id="@+id/tiviicon"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
 
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="30dp"
-             />
+            android:layout_marginTop="40dp"
+            android:src="@drawable/tv"
+            />
 
         <Switch
             android:id="@+id/swTivi"
-            android:layout_width="wrap_content"
+
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tiviicon"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
-            android:text="TV            "
-            android:textSize="25dp"
-            android:textStyle="bold"
+
+            android:layout_marginTop="20dp"
+            android:text="TV"
+            android:padding="20dp"
+            android:fontFamily="@font/kanit_regular"
+            android:textSize="15dp"
+
 
             />
 
@@ -54,34 +59,33 @@
 
     <RelativeLayout
         android:id="@+id/lampliving"
-        android:layout_width="190dp"
-        android:layout_height="240dp"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
         android:layout_below="@id/livingroomheader"
-        android:layout_marginLeft="200dp"
+        android:layout_marginLeft="180dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/duongvien_goctron"
-        android:backgroundTint="#85C1E9">
+        android:backgroundTint="#E5E7E9">
 
         <ImageView
             android:id="@+id/lampicon"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="30dp"
+            android:src="@drawable/ceilinglamp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
              />
 
         <Switch
             android:id="@+id/swLamp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/lampicon"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="30dp"
-            android:text="Lamp        "
-            android:textSize="25dp"
-            android:textStyle="bold"
 
+            android:layout_marginTop="20dp"
+            android:text="Lamp"
+            android:padding="20dp"
+            android:fontFamily="@font/kanit_regular"
+            android:textSize="15dp"
             />
 
 
@@ -89,42 +93,79 @@
 
     <RelativeLayout
         android:id="@+id/cameraliving"
-        android:layout_width="match_parent"
-        android:layout_height="240dp"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
         android:layout_below="@id/tiviliving"
         android:layout_marginTop="30dp"
         android:background="@drawable/duongvien_goctron"
-        android:backgroundTint="#85C1E9">
+        android:backgroundTint="#E5E7E9">
 
         <ImageView
             android:id="@+id/cameraicon"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="40dp"
             android:src="@drawable/camera" />
 
         <Switch
             android:id="@+id/swCamera"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/cameraicon"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="5dp"
-            android:text="Camera      "
-            android:textSize="25dp"
-            android:textStyle="bold"
+
+            android:layout_marginTop="20dp"
+            android:text="Camera"
+            android:padding="20dp"
+            android:fontFamily="@font/kanit_regular"
+            android:textSize="15dp"
 
             />
 
 
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/tiviliving"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/duongvien_goctron"
+        android:backgroundTint="#E5E7E9">
+
+        <ImageView
+
+            android:id="@+id/fanicon"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="40dp"
+            android:src="@drawable/fan"/>
+
+        <Switch
+
+            android:id="@+id/swFan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/fanicon"
+
+            android:layout_marginTop="20dp"
+            android:text="Fan"
+            android:padding="20dp"
+            android:fontFamily="@font/kanit_regular"
+            android:textSize="15dp"
+
+            />
 
 
-
-
-
-
-
-
+    </RelativeLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/bottom_nav"
+        android:layout_alignParentBottom="true"
+        app:itemIconTint="#FF8C00"
+        app:itemTextColor="@color/black"
+        android:background="@drawable/duongvien_goctron"
+        app:menu="@menu/menu_bottom_nav" />
 </RelativeLayout>
