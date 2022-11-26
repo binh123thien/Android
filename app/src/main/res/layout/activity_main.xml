@@ -98,22 +98,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.768" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="365dp"
-        android:layout_height="26dp"
-        android:gravity="center"
-        android:text="Have a good day!"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.717"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="217dp"

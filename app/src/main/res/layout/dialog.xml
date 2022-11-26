@@ -17,14 +17,14 @@
             android:gravity="center"
             android:text="You want to logout?"
             android:textColor="@color/black"
-            android:textSize="28dp" />
+            android:textSize="20dp" />
 
     <Button
         android:id="@+id/btncancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/notelogout"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#FF8C00"
         android:text="Cancel" />
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/notelogout"
-        android:layout_marginLeft="150dp"
+        android:layout_marginLeft="130dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#FF8C00"
         android:text="Logout" />
