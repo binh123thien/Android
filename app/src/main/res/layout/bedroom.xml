@@ -3,60 +3,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bedroombg"
-    android:paddingLeft="40dp"
-    android:paddingRight="40dp">
+    android:background="#F7F9F9 "
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp">
 
     <TextView
         android:id="@+id/bedroomheader"
+        android:fontFamily="@font/kanit_regular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:gravity="center"
+        android:layout_marginTop="100dp"
+
         android:text="Bed Room"
         android:textColor="@color/black"
-        android:textSize="35dp"
+        android:textSize="25dp"
         android:textStyle="bold" />
 
     <RelativeLayout
         android:id="@+id/aircondition"
         android:layout_width="match_parent"
-        android:layout_height="330dp"
+        android:layout_height="250dp"
+
         android:layout_below="@id/bedroomheader"
         android:layout_marginTop="30dp"
         android:background="@drawable/duongvien_goctron"
-        android:backgroundTint="#85C1E9">
+        android:backgroundTint="#E5E7E9">
 
 
         <Switch
             android:id="@+id/switchairconditon"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="20dp"
+            android:padding="20dp"
             android:text="Air conditon      "
             android:textSize="25dp"
-            android:textStyle="bold"
+
+            android:fontFamily="@font/kanit_regular"
 
             />
 
         <ImageView
             android:id="@+id/imageaircondition"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="-20dp"
             android:layout_below="@id/switchairconditon"
-            android:layout_marginLeft="110dp"
-
-            android:layout_marginTop="20dp"
             android:src="@drawable/ac" />
 
         <TextView
             android:id="@+id/tv_seekbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text=" °C"
+            android:layout_marginTop="10dp"
             android:layout_below="@id/imageaircondition"
             android:gravity="center"
-            android:textSize="30dp" />
+            android:textSize="25dp" />
 
 
         <SeekBar
@@ -66,27 +68,29 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageaircondition"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="50dp"
             android:max="30"
             android:min="16"
-            android:progress="0" />
+
+            />
 
     </RelativeLayout>
 
     <RelativeLayout
 
-        android:layout_width="155dp"
-        android:layout_height="180dp"
         android:layout_below="@id/aircondition"
-        android:layout_marginTop="20dp"
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/duongvien_goctron"
-        android:backgroundTint="#85C1E9">
+        android:backgroundTint="#E5E7E9"
+        >
 
         <ImageView
             android:id="@+id/lampicon"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+
             android:layout_marginTop="20dp"
             android:src="@drawable/idea"
 
@@ -94,12 +98,15 @@
 
         <Switch
             android:id="@+id/swlampp"
-            android:layout_width="67dp"
-            android:layout_height="38dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@id/lampicon"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="15dp"
             android:backgroundTint="#2874A6 "
+            android:padding="20dp"
+            android:text="Lamp"
+            android:fontFamily="@font/kanit_regular"
+
 
             />
 
@@ -107,19 +114,21 @@
 
     <RelativeLayout
 
-        android:layout_width="155dp"
-        android:layout_height="180dp"
+
         android:layout_below="@id/aircondition"
         android:layout_marginLeft="180dp"
-        android:layout_marginTop="20dp"
+
+        android:layout_width="170dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/duongvien_goctron"
-        android:backgroundTint="#85C1E9">
+        android:backgroundTint="#E5E7E9"
+        >
 
         <ImageView
             android:id="@+id/tvicon"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginLeft="35dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
             android:layout_marginTop="20dp"
             android:src="@drawable/monitor"
 
@@ -127,12 +136,15 @@
 
         <Switch
             android:id="@+id/swTvv"
-            android:layout_width="71dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvicon"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="28dp"
+            android:fontFamily="@font/kanit_regular"
+            android:text="TV"
+            android:layout_marginTop="15dp"
+            android:padding="20dp"
             android:backgroundTint="#2874A6 "
+
 
             />
     </RelativeLayout>
@@ -142,9 +154,10 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/bottom_nav"
-
         android:layout_alignParentBottom="true"
         app:itemIconTint="#FF8C00"
+
         app:itemTextColor="@color/black"
+        android:background="@drawable/duongvien_goctron"
         app:menu="@menu/menu_bottom_nav" />
 </RelativeLayout>

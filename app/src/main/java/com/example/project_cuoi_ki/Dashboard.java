@@ -81,15 +81,27 @@ public class Dashboard extends AppCompatActivity {
                 builderDiaglog = new AlertDialog.Builder(Dashboard.this);
                 View layoutView = getLayoutInflater().inflate(dialog,null);
                 Button btnlogout = layoutView.findViewById(R.id.btnlogout);
+                Button btnCancel = layoutView.findViewById(R.id.btncancel);
 
                 builderDiaglog.setView(layoutView);
                 alertDialog = builderDiaglog.create();
                 alertDialog.show();
 
-                btnlogout.setOnClickListener(new View.OnClickListener() {
+                btnCancel.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         alertDialog.dismiss();
+                    }
+                });
+
+                btnlogout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        sessionManager.SetLogin(false);
+                        Intent intent1 = new Intent(getApplication(),Login.class);
+                        startActivity(intent1);
+                        finish();
+//                        alertDialog.dismiss();
                     }
                 });
             }
