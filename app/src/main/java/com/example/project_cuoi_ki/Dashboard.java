@@ -1,7 +1,10 @@
 package com.example.project_cuoi_ki;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +30,9 @@ public class Dashboard extends AppCompatActivity {
     AlertDialog.Builder builderDiaglog;
     AlertDialog alertDialog;
 
+    SessionManager sessionManager;
+
+
     ImageView imageliving,imagebed,imagekitchen;
     TextView textliving,textbed,textkitchen,textnhietdo,textdoam;
     TextClock time;
@@ -36,8 +42,10 @@ public class Dashboard extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
+        sessionManager = new SessionManager(getApplication());
 
         BottomNavigationView navigationView = findViewById(R.id.bottom_nav);
+
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -58,6 +66,7 @@ public class Dashboard extends AppCompatActivity {
                 }
                 return false;
             }
+
             public void dashboard_page(){
                 Intent intent=new Intent(Dashboard.this,Dashboard.class);
                 startActivity(intent);
@@ -85,6 +94,7 @@ public class Dashboard extends AppCompatActivity {
                 });
             }
         });
+
         imageliving = findViewById(R.id.imagelivingroom);
         imagebed = findViewById(R.id.imagebedroom);
         imagekitchen = findViewById(R.id.imagekitchenroom);

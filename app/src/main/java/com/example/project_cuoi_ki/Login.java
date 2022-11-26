@@ -23,12 +23,17 @@ public class Login extends AppCompatActivity {
     private TextView btn_register_toggle;
     private Button btn_login;
     private FirebaseAuth mAuth;
+    SessionManager sessionManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sessionManager = new SessionManager(getApplication());
         mAuth = FirebaseAuth.getInstance();
         AnhXa();
+
+
 //        sự kiện nút nhấn đăng nhập
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +47,8 @@ public class Login extends AppCompatActivity {
                 register();
             }
         });
+
+        CheckLogin();
     }
 
     public void login(){
@@ -60,6 +67,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    sessionManager.SetLogin(true);
                     Toast.makeText(getApplicationContext(), "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(Login.this, Dashboard.class);
                     startActivity(intent);
@@ -73,6 +81,16 @@ public class Login extends AppCompatActivity {
     public void register(){
         Intent intent=new Intent(Login.this,Register.class);
         startActivity(intent);
+    }
+
+    private void CheckLogin(){
+        if(!sessionManager.Check()){
+            Toast.makeText(this, "Vui Long Dang Nhap", Toast.LENGTH_SHORT).show();
+        }else {
+            Intent intent = new Intent(getApplication(),Dashboard.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     public void AnhXa(){
