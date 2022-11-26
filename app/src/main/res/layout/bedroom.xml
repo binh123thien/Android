@@ -139,10 +139,11 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
         android:id="@+id/bottom_nav"
+        android:layout_width="371dp"
+        android:layout_height="49dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
         app:itemIconTint="#FF8C00"
         app:itemTextColor="@color/black"
         app:menu="@menu/menu_bottom_nav" />

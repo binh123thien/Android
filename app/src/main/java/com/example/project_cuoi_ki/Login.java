@@ -85,7 +85,7 @@ public class Login extends AppCompatActivity {
 
     private void CheckLogin(){
         if(!sessionManager.Check()){
-            Toast.makeText(this, "Vui Long Dang Nhap", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Mời bạn đăng nhập", Toast.LENGTH_SHORT).show();
         }else {
             Intent intent = new Intent(getApplication(),Dashboard.class);
             startActivity(intent);
