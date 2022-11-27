@@ -54,7 +54,7 @@
             android:id="@+id/tv_seekbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=" °C"
+
             android:layout_marginTop="10dp"
             android:layout_below="@id/imageaircondition"
             android:gravity="center"
@@ -64,7 +64,7 @@
         <SeekBar
 
             android:id="@+id/seekBar"
-            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            style="@style/Widget.AppCompat.SeekBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageaircondition"
