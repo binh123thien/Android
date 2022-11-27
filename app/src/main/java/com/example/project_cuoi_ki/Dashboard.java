@@ -122,13 +122,12 @@ public class Dashboard extends AppCompatActivity {
         time.setFormat24Hour(formatdate);
 
         //đọc nhiệt độ, độ ẩm
-        final DatabaseReference nhietdo=database.getReference("Room_NhietDo");
-        final DatabaseReference doam=database.getReference("Room_DoAm");
+        final DatabaseReference databaseReference = database.getReference();
 
-        nhietdo.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("DHT11").child("Nhiet do").addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value=dataSnapshot.getValue(String.class);
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String value= snapshot.getValue().toString();
                 value = value + "°C";
                 textnhietdo.setText(value);
             }
@@ -139,10 +138,10 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
-        doam.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("DHT11").child("Do am").addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value=dataSnapshot.getValue(String.class);
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String value= snapshot.getValue().toString();
                 value = value + "%";
                 textdoam.setText(value);
             }
