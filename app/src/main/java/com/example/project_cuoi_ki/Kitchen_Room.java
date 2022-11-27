@@ -44,7 +44,7 @@ public class Kitchen_Room extends AppCompatActivity {
         Fridge_icon = findViewById(R.id.imagefridge);
         Light_icon = findViewById(R.id.lighticon);
         Stove_icon = findViewById(R.id.imagestove);
-        Fridge_icon = findViewById(R.id.imagefridge);
+        Exhaust_icon = findViewById(R.id.exhausticon);
         sw_Fridge = findViewById(R.id.switchfridge);
         sw_Light = findViewById(R.id.swLight);
         sw_Exhaust = findViewById(R.id.swExhaust);
