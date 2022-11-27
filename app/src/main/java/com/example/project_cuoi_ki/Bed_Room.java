@@ -68,6 +68,7 @@ public class Bed_Room extends AppCompatActivity {
         sw_TiVi=findViewById(R.id.swTvv);
         sw_Lampp=findViewById(R.id.swlampp);
         sw_AirConditon=findViewById(R.id.switchairconditon);
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference databaseReference = database.getReference();
 
@@ -151,9 +152,9 @@ public class Bed_Room extends AppCompatActivity {
             }
         });
 
-//điều khiển on off của airconditon
-        //firebase thay đổi làm airconditon on off
-        databaseReference.child("Bed_Room").child("Air_Condition").addValueEventListener(new ValueEventListener() {
+//điều khiển on off của air condition
+        //firebase thay đổi làm tv on off
+        databaseReference.child("Bed_Room").child("AirCondition").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String value= dataSnapshot.getValue().toString();
@@ -167,19 +168,19 @@ public class Bed_Room extends AppCompatActivity {
                     AirConditon_icon.setImageResource(R.drawable.ac);
                     sw_AirConditon.setChecked(false);
                 }
-                //switch thay đổi airconditon on off
+                //switch thay đổi tv on off
                 sw_AirConditon.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     @Override
                     public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                         if(isChecked) {
                             stateAirConditon=true;
                             AirConditon_icon.setImageResource(R.drawable.bed_air_on);
-                            databaseReference.child("Bed_Room").child("Air_Condition").setValue("ON");
+                            databaseReference.child("Bed_Room").child("AirCondition").setValue("ON");
                         }
                         else {
                             stateAirConditon=false;
                             AirConditon_icon.setImageResource(R.drawable.ac);
-                            databaseReference.child("Bed_Room").child("Air_Condition").setValue("OFF");
+                            databaseReference.child("Bed_Room").child("AirCondition").setValue("OFF");
                         }
                     }
                 });
@@ -191,7 +192,6 @@ public class Bed_Room extends AppCompatActivity {
             }
         });
 
-        //bottom navigation
         BottomNavigationView navigationView = findViewById(R.id.bottom_nav);
         navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
