@@ -39,22 +39,7 @@ public class Kitchen_Room extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kitchenroom);
         init();
-        seekbarfridge.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                tv_seekbarfridge.setText("" + i);
-            }
 
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
 
 
         Fridge_icon = findViewById(R.id.imagefridge);
