@@ -26,12 +26,12 @@ public class Living_Room extends AppCompatActivity {
 
     SessionManager sessionManager;
 
-    ImageView TV_icon,Lamp_icon,Camera_icon;
-    Switch sw_TV, sw_Lamp, sw_Camera;
+    ImageView TV_icon,Lamp_icon,Camera_icon,Fan_icon;
+    Switch sw_TV, sw_Lamp, sw_Camera,sw_Fan;
     boolean stateTV=false;
     boolean stateLamp=false;
     boolean stateCamera=false;
-
+    boolean stateFan=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,20 +39,21 @@ public class Living_Room extends AppCompatActivity {
         TV_icon=findViewById(R.id.tiviicon);
         Lamp_icon=findViewById(R.id.lampicon);
         Camera_icon=findViewById(R.id.cameraicon);
+        Fan_icon=findViewById(R.id.fanicon);
         sw_TV=findViewById(R.id.swTivi);
         sw_Lamp=findViewById(R.id.swLamp);
         sw_Camera=findViewById(R.id.swCamera);
+        sw_Fan=findViewById(R.id.swFan);
+
         FirebaseDatabase database=FirebaseDatabase.getInstance();
-        final DatabaseReference TV=database.getReference("Living_TV");
-        final DatabaseReference Lamp=database.getReference("Living_Lamp");
-        final DatabaseReference Camera=database.getReference("Living_Camera");
+        final DatabaseReference databaseReference = database.getReference();
 
 //điều khiển on off của TV
         //firebase thay đổi làm tv on off
-        TV.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Living_Room").child("TV").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value=dataSnapshot.getValue(String.class);
+                String value= dataSnapshot.getValue().toString();
                 if(value.equals("ON")){
                     stateTV=true; //bật TV
                     TV_icon.setImageResource(R.drawable.tv_on);
@@ -70,12 +71,12 @@ public class Living_Room extends AppCompatActivity {
                         if(isChecked) {
                             stateTV=true;
                             TV_icon.setImageResource(R.drawable.tv_on);
-                            TV.setValue("ON");
+                            databaseReference.child("Living_Room").child("TV").setValue("ON");
                         }
                         else {
                             stateTV=false;
                             TV_icon.setImageResource(R.drawable.tv_off);
-                            TV.setValue("OFF");
+                            databaseReference.child("Living_Room").child("TV").setValue("OFF");
                         }
                     }
                 });
@@ -89,10 +90,10 @@ public class Living_Room extends AppCompatActivity {
 
 //điều khiển on off của lamp
         //firebase thay đổi làm lamp on off
-        Lamp.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Living_Room").child("Lamp").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value=dataSnapshot.getValue(String.class);
+                String value= dataSnapshot.getValue().toString();
                 if(value.equals("ON")){
                     stateLamp=true; //bật TV
                     Lamp_icon.setImageResource(R.drawable.living_lamp_on);
@@ -110,12 +111,12 @@ public class Living_Room extends AppCompatActivity {
                         if(isChecked) {
                             stateLamp=true;
                             Lamp_icon.setImageResource(R.drawable.living_lamp_on);
-                            Lamp.setValue("ON");
+                            databaseReference.child("Living_Room").child("Lamp").setValue("ON");
                         }
                         else {
                             stateLamp=false;
                             Lamp_icon.setImageResource(R.drawable.ceilinglamp);
-                            Lamp.setValue("OFF");
+                            databaseReference.child("Living_Room").child("Lamp").setValue("OFF");
                         }
                     }
                 });
@@ -129,10 +130,10 @@ public class Living_Room extends AppCompatActivity {
 
 //điều khiển on off của camera
         //firebase thay đổi làm camera on off
-        Camera.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Living_Room").child("Camera").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value=dataSnapshot.getValue(String.class);
+                String value= dataSnapshot.getValue().toString();
                 if(value.equals("ON")){
                     stateCamera=true; //bật TV
                     Camera_icon.setImageResource(R.drawable.living_camera_on);
@@ -150,12 +151,12 @@ public class Living_Room extends AppCompatActivity {
                         if(isChecked) {
                             stateCamera=true;
                             Camera_icon.setImageResource(R.drawable.living_camera_on);
-                            Camera.setValue("ON");
+                            databaseReference.child("Living_Room").child("Camera").setValue("ON");
                         }
                         else {
                             stateCamera=false;
                             Camera_icon.setImageResource(R.drawable.camera);
-                            Camera.setValue("OFF");
+                            databaseReference.child("Living_Room").child("Camera").setValue("OFF");
                         }
                     }
                 });
@@ -166,6 +167,46 @@ public class Living_Room extends AppCompatActivity {
 
             }
         });
+//điều khiển on off của fan
+        //firebase thay đổi làm fan on off
+        databaseReference.child("Living_Room").child("Fan").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String value= dataSnapshot.getValue().toString();
+                if(value.equals("ON")){
+                    stateFan=true; //bật TV
+                    Fan_icon.setImageResource(R.drawable.fan_on);
+                    sw_Fan.setChecked(true);
+                }
+                else if(value.equals("OFF")){
+                    stateFan=false; //tắt TV
+                    Fan_icon.setImageResource(R.drawable.fan);
+                    sw_Fan.setChecked(false);
+                }
+                //switch thay đổi fan on off
+                sw_Fan.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                        if(isChecked) {
+                            stateFan=true;
+                            Fan_icon.setImageResource(R.drawable.fan_on);
+                            databaseReference.child("Living_Room").child("Fan").setValue("ON");
+                        }
+                        else {
+                            stateFan=false;
+                            Fan_icon.setImageResource(R.drawable.fan);
+                            databaseReference.child("Living_Room").child("Fan").setValue("OFF");
+                        }
+                    }
+                });
+
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
 
         //bottom navigation
         BottomNavigationView navigationView = findViewById(R.id.bottom_nav);

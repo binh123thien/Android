@@ -68,17 +68,15 @@ public class Bed_Room extends AppCompatActivity {
         sw_TiVi=findViewById(R.id.swTvv);
         sw_Lampp=findViewById(R.id.swlampp);
         sw_AirConditon=findViewById(R.id.switchairconditon);
-        FirebaseDatabase database=FirebaseDatabase.getInstance();
-        final DatabaseReference TiVi=database.getReference("Bed_TV");
-        final DatabaseReference Lampp=database.getReference("Bed_Lamp");
-        final DatabaseReference AirConditon=database.getReference("Bed_Air");
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference databaseReference = database.getReference();
 
 //điều khiển on off của TV
         //firebase thay đổi làm tv on off
-        TiVi.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Bed_Room").child("TV").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value=dataSnapshot.getValue(String.class);
+                String value= dataSnapshot.getValue().toString();
                 if(value.equals("ON")){
                     stateTiVi=true; //bật TV
                     TiVi_icon.setImageResource(R.drawable.bed_tv_on);
@@ -96,12 +94,12 @@ public class Bed_Room extends AppCompatActivity {
                         if(isChecked) {
                             stateTiVi=true;
                             TiVi_icon.setImageResource(R.drawable.bed_tv_on);
-                            TiVi.setValue("ON");
+                            databaseReference.child("Bed_Room").child("TV").setValue("ON");
                         }
                         else {
                             stateTiVi=false;
                             TiVi_icon.setImageResource(R.drawable.monitor);
-                            TiVi.setValue("OFF");
+                            databaseReference.child("Bed_Room").child("TV").setValue("OFF");
                         }
                     }
                 });
@@ -115,10 +113,10 @@ public class Bed_Room extends AppCompatActivity {
 
 //điều khiển on off của lamp
         //firebase thay đổi làm lamp on off
-        Lampp.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Bed_Room").child("Lamp").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value=dataSnapshot.getValue(String.class);
+                String value= dataSnapshot.getValue().toString();
                 if(value.equals("ON")){
                     stateLampp=true; //bật TV
                     Lampp_icon.setImageResource(R.drawable.bed_light_on);
@@ -136,12 +134,12 @@ public class Bed_Room extends AppCompatActivity {
                         if(isChecked) {
                             stateLampp=true;
                             Lampp_icon.setImageResource(R.drawable.bed_light_on);
-                            Lampp.setValue("ON");
+                            databaseReference.child("Bed_Room").child("Lamp").setValue("ON");
                         }
                         else {
                             stateLampp=false;
                             Lampp_icon.setImageResource(R.drawable.idea);
-                            Lampp.setValue("OFF");
+                            databaseReference.child("Bed_Room").child("Lamp").setValue("OFF");
                         }
                     }
                 });
@@ -155,10 +153,10 @@ public class Bed_Room extends AppCompatActivity {
 
 //điều khiển on off của airconditon
         //firebase thay đổi làm airconditon on off
-        AirConditon.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Bed_Room").child("Air_Condition").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value=dataSnapshot.getValue(String.class);
+                String value= dataSnapshot.getValue().toString();
                 if(value.equals("ON")){
                     stateAirConditon=true; //bật TV
                     AirConditon_icon.setImageResource(R.drawable.bed_air_on);
@@ -176,12 +174,12 @@ public class Bed_Room extends AppCompatActivity {
                         if(isChecked) {
                             stateAirConditon=true;
                             AirConditon_icon.setImageResource(R.drawable.bed_air_on);
-                            AirConditon.setValue("ON");
+                            databaseReference.child("Bed_Room").child("Air_Condition").setValue("ON");
                         }
                         else {
                             stateAirConditon=false;
                             AirConditon_icon.setImageResource(R.drawable.ac);
-                            AirConditon.setValue("OFF");
+                            databaseReference.child("Bed_Room").child("Air_Condition").setValue("OFF");
                         }
                     }
                 });

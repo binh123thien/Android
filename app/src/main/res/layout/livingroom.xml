@@ -35,8 +35,7 @@
             android:layout_height="50dp"
 
             android:layout_marginTop="40dp"
-            android:src="@drawable/tv"
-            />
+            android:src="@drawable/tv" />
 
         <Switch
             android:id="@+id/swTivi"
@@ -46,9 +45,9 @@
             android:layout_below="@id/tiviicon"
 
             android:layout_marginTop="20dp"
-            android:text="TV"
-            android:padding="20dp"
             android:fontFamily="@font/kanit_regular"
+            android:padding="20dp"
+            android:text="TV"
             android:textSize="15dp"
 
 
@@ -69,11 +68,10 @@
 
         <ImageView
             android:id="@+id/lampicon"
-            android:src="@drawable/ceilinglamp"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="40dp"
-             />
+            android:src="@drawable/ceilinglamp" />
 
         <Switch
             android:id="@+id/swLamp"
@@ -140,7 +138,7 @@
             android:layout_height="50dp"
 
             android:layout_marginTop="40dp"
-            android:src="@drawable/fan"/>
+            android:src="@drawable/fan" />
 
         <Switch
 
@@ -150,9 +148,9 @@
             android:layout_below="@id/fanicon"
 
             android:layout_marginTop="20dp"
-            android:text="Fan"
-            android:padding="20dp"
             android:fontFamily="@font/kanit_regular"
+            android:padding="20dp"
+            android:text="Fan"
             android:textSize="15dp"
 
             />

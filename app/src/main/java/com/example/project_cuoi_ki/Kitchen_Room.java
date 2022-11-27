@@ -29,36 +29,35 @@ public class Kitchen_Room extends AppCompatActivity {
 
     TextView tv_seekbarfridge;
     SeekBar seekbarfridge;
-    ImageView Fridge_icon,Light_icon,Exhaust_icon;
-    Switch sw_Fridge,sw_Light,sw_Exhaust;
+    ImageView Fridge_icon,Light_icon,Exhaust_icon,Stove_icon;
+    Switch sw_Fridge,sw_Light,sw_Exhaust,sw_Stove;
     Boolean stateFridge=false;
     Boolean stateLight=false;
     Boolean stateExhaust=false;
+    Boolean stateStove=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kitchenroom);
         init();
 
-
-
         Fridge_icon = findViewById(R.id.imagefridge);
         Light_icon = findViewById(R.id.lighticon);
-        Exhaust_icon = findViewById(R.id.exhausticon);
+        Stove_icon = findViewById(R.id.imagestove);
+        Fridge_icon = findViewById(R.id.imagefridge);
         sw_Fridge = findViewById(R.id.switchfridge);
         sw_Light = findViewById(R.id.swLight);
         sw_Exhaust = findViewById(R.id.swExhaust);
+        sw_Stove = findViewById(R.id.switchstove);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference Fridge = database.getReference("Kitchen_Fridge");
-        final DatabaseReference Light = database.getReference("Kitchen_Light");
-        final DatabaseReference Exhaust = database.getReference("Kitchen_Exhaust");
+        final DatabaseReference databaseReference = database.getReference();
 
 //điều khiển on off của Fridge
         //firebase thay đổi làm Fridge on off
-        Fridge.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Kitchen_Room").child("Fridge").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
+                String value= dataSnapshot.getValue().toString();
                 if (value.equals("ON")) {
                     stateFridge = true; //bật TV
                     Fridge_icon.setImageResource(R.drawable.kitchen_fridge_on);
@@ -75,11 +74,11 @@ public class Kitchen_Room extends AppCompatActivity {
                         if (isChecked) {
                             stateFridge = true;
                             Fridge_icon.setImageResource(R.drawable.kitchen_fridge_on);
-                            Fridge.setValue("ON");
+                            databaseReference.child("Kitchen_Room").child("Fridge").setValue("ON");
                         } else {
                             stateFridge = false;
                             Fridge_icon.setImageResource(R.drawable.fridge);
-                            Fridge.setValue("OFF");
+                            databaseReference.child("Kitchen_Room").child("Fridge").setValue("OFF");
                         }
                     }
                 });
@@ -94,10 +93,10 @@ public class Kitchen_Room extends AppCompatActivity {
 
 //điều khiển on off của Light
         //firebase thay đổi làm Light on off
-        Light.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Kitchen_Room").child("Light").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
+                String value= dataSnapshot.getValue().toString();
                 if (value.equals("ON")) {
                     stateLight = true; //bật TV
                     Light_icon.setImageResource(R.drawable.kitchen_light_on);
@@ -114,11 +113,11 @@ public class Kitchen_Room extends AppCompatActivity {
                         if (isChecked) {
                             stateLight = true;
                             Light_icon.setImageResource(R.drawable.kitchen_light_on);
-                            Light.setValue("ON");
+                            databaseReference.child("Kitchen_Room").child("Light").setValue("ON");
                         } else {
                             stateLight = false;
                             Light_icon.setImageResource(R.drawable.countertop);
-                            Light.setValue("OFF");
+                            databaseReference.child("Kitchen_Room").child("Light").setValue("OFF");
                         }
                     }
                 });
@@ -133,10 +132,10 @@ public class Kitchen_Room extends AppCompatActivity {
 
 //điều khiển on off của Exhaust
         //firebase thay đổi làm Exhaust on off
-        Exhaust.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Kitchen_Room").child("Exhaust").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                String value = dataSnapshot.getValue(String.class);
+                String value= dataSnapshot.getValue().toString();
                 if (value.equals("ON")) {
                     stateExhaust = true; //bật TV
                     Exhaust_icon.setImageResource(R.drawable.kitchen_exhaust_on);
@@ -153,11 +152,49 @@ public class Kitchen_Room extends AppCompatActivity {
                         if (isChecked) {
                             stateExhaust = true;
                             Exhaust_icon.setImageResource(R.drawable.kitchen_exhaust_on);
-                            Exhaust.setValue("ON");
+                            databaseReference.child("Kitchen_Room").child("Exhaust").setValue("ON");
                         } else {
                             stateExhaust = false;
                             Exhaust_icon.setImageResource(R.drawable.exhaust);
-                            Exhaust.setValue("OFF");
+                            databaseReference.child("Kitchen_Room").child("Exhaust").setValue("OFF");
+                        }
+                    }
+                });
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+//điều khiển on off của Stove
+        //firebase thay đổi làm Stove on off
+        databaseReference.child("Kitchen_Room").child("Stove").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String value= dataSnapshot.getValue().toString();
+                if (value.equals("ON")) {
+                    stateStove = true; //bật TV
+                    Stove_icon.setImageResource(R.drawable.stove_on);
+                    sw_Stove.setChecked(true);
+                } else if (value.equals("OFF")) {
+                    stateStove = false; //tắt TV
+                    Stove_icon.setImageResource(R.drawable.stove);
+                    sw_Stove.setChecked(false);
+                }
+                //switch thay đổi Stove on off
+                sw_Stove.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                        if (isChecked) {
+                            stateStove = true;
+                            Stove_icon.setImageResource(R.drawable.stove_on);
+                            databaseReference.child("Kitchen_Room").child("Stove").setValue("ON");
+                        } else {
+                            stateStove = false;
+                            Stove_icon.setImageResource(R.drawable.stove);
+                            databaseReference.child("Kitchen_Room").child("Stove").setValue("OFF");
                         }
                     }
                 });
