@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:background="#FBFCFC ">
+    <TextView
+        android:fontFamily="@font/kanit_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INFOMATION"
+        android:id="@+id/infomation"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:padding="30dp"
+
+        />
+    <ImageView
+        android:id="@+id/nk"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_below="@+id/infomation"
+        android:src="@drawable/binh"
+        />
+    <TextView
+        android:fontFamily="@font/kanit_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nk"
+        android:textSize="40dp"
+
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Nguyễn Văn Bình"
+        android:gravity="center"
+        android:id="@+id/nktxt"
+        />
+    <TextView
+        android:fontFamily="@font/kanit_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nktxt"
+        android:textSize="22dp"
+
+
+        android:textColor="@color/black"
+        android:text="Back-end DEV"
+        android:gravity="center"
+        android:id="@+id/nkposition"
+        />
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nkposition"
+        android:text="ID Number   : 19119075"
+        android:id="@+id/idtxt"
+        android:textSize="18dp"
+        android:fontFamily="@font/kanit_regular"
+        android:textColor="@color/black"
+
+        />
+
+    <TextView
+        android:fontFamily="@font/kanit_regular"
+        android:id="@+id/emailtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idtxt"
+        android:textColor="@color/black"
+        android:text="Email         :19119075@student.hcmute.edu.vn"
+        android:textSize="18dp"
+        />
+    <TextView
+        android:textColor="@color/black"
+        android:fontFamily="@font/kanit_regular"
+        android:id="@+id/phonetxt"
+        android:layout_below="@+id/emailtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone           : 0853093616"
+        android:textSize="18dp"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

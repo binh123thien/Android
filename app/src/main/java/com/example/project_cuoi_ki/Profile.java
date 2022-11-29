@@ -1,40 +1,27 @@
 package com.example.project_cuoi_ki;
 
-import android.media.Image;
-import android.net.Uri;
 import android.os.Bundle;
-import android.widget.EditText;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.android.material.tabs.TabLayout;
 
 public class Profile extends AppCompatActivity {
-    ImageView img;
-    EditText name_profile, email_profile;
+    private TabLayout mTabLayout;
+    private ViewPager mViewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile);
-        img = findViewById(R.id.img_ava);
-        name_profile = findViewById(R.id.name_profile);
-        email_profile = findViewById(R.id.email_profile);
 
-        showUser();
-    }
-    private void showUser(){
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if(user ==null){
-            return;
-        }
-        String name = user.getDisplayName();
-        String email = user.getDisplayName();
-        Uri photoURL = user.getPhotoUrl();
+        mTabLayout = findViewById(R.id.tab_layout);
+        mViewPager = findViewById(R.id.view_pager);
 
-        name_profile.setText(name);
-        email_profile.setText(email);
+        ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        mViewPager.setAdapter(viewPagerAdapter);
+        mTabLayout.setupWithViewPager(mViewPager);
     }
 }

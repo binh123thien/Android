@@ -75,6 +75,7 @@ public class Dashboard extends AppCompatActivity {
             public void profile_page(){
                 Intent intent=new Intent(Dashboard.this,Profile.class);
                 startActivity(intent);
+
             }
 
             private void showAlertDialog(int dialog) {
