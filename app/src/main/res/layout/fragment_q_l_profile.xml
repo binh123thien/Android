@@ -71,7 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/idtxt"
         android:textColor="@color/black"
-        android:text="Email         : 19119109@student.hcmute.edu.vn"
+        android:text="Email:  19119109@student.hcmute.edu.vn"
         android:textSize="18dp"
         />
     <TextView

@@ -71,19 +71,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/idtxt"
         android:textColor="@color/black"
-        android:text="Email            : caonhatkhang2001@gmail.com"
+        android:text="Email:    caonhatkhang2001@gmail.com "
         android:textSize="18dp"
         />
+
+
     <TextView
-        android:textColor="@color/black"
-        android:fontFamily="@font/kanit_regular"
         android:id="@+id/phonetxt"
-        android:layout_below="@+id/emailtxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/emailtxt"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/kanit_regular"
         android:text="Phone           : 0889066088"
-        android:textSize="18dp"
-        />
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
